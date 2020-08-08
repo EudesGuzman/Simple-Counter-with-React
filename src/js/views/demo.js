@@ -1,43 +1,22 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
-
-import { Context } from "../store/appContext";
-
-import "../../styles/demo.scss";
+import React, { useState, useEffect } from "react";
+import "../../styles/home.scss";
 
 export const Demo = () => {
-	const { store, actions } = useContext(Context);
+	const [counter, setCounter] = useState(0);
+
+	useEffect(() => {
+		setInterval(() => {
+			setCounter(counter => counter + 1);
+		}, 1000);
+	}, []);
 
 	return (
 		<div className="container">
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul>
-			<br />
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link>
+			<h1>Counter</h1>
+			<div className="target">{counter.toString()[counter.toString().length - 3] || 0}</div>
+			<div className="target">{counter.toString()[counter.toString().length - 2] || 0}</div>
+			<div className="target">{counter.toString()[counter.toString().length - 1] || 0}</div>
+			{console.log(counter.toString()[counter.toString().length - 1])}
 		</div>
 	);
 };

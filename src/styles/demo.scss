@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+.container{
+    width: 600px;
+    text-align: center;
+}
+
+h1{
+    color: White;
+        font-size: 3.5rem;
+}
+
+.target {
+    background-color: grey;
+    color: white;
+    display: inline;
+    font-size: 5rem;
+    margin: 0 0.2rem;
+    padding: 5px;
+    border-radius: 7px;
+}
