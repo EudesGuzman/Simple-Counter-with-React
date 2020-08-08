@@ -12,7 +12,7 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<h1>Counter</h1>
+			<h1>Counter </h1>
 			<div className="target">{counter.toString()[counter.toString().length - 3] || 0}</div>
 			<div className="target">{counter.toString()[counter.toString().length - 2] || 0}</div>
 			<div className="target">{counter.toString()[counter.toString().length - 1] || 0}</div>
