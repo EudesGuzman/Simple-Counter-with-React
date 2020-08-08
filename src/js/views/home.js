@@ -19,7 +19,7 @@ export const Home = () => {
 
 	return (
 		<div className="container">
-			<h1>Counter </h1>
+			<h1>Counter</h1>
 			<div className="target">{counter2}</div>
 			<div className="target">{counter}</div>
 		</div>
