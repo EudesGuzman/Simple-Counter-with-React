@@ -23,10 +23,10 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
-							<Home />
+							<Demo />
 						</Route>
 						<Route exact path="/demo">
-							<Demo />
+							<Home />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
