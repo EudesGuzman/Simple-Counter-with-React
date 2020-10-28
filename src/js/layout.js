@@ -20,13 +20,13 @@ const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
+					{/* <Navbar /> */}
 					<Switch>
 						<Route exact path="/">
-							<Demo />
+							<Home />
 						</Route>
 						<Route exact path="/demo">
-							<Home />
+							<Demo />
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
@@ -35,7 +35,7 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					<Footer />
+					{/* 		<Footer /> */}
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
